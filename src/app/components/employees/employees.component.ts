@@ -14,9 +14,13 @@ export class EmployeesComponent implements OnInit {
   ngOnInit(): void {
     this.getEmployeesData();
   }
+
   getEmployeesData(){
     this.dataService.getData().subscribe(res =>{
       this.employees=res;
     });
+  }
+  insertData(){
+    console.log('hello');
   }
 }
