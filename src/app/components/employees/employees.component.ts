@@ -23,6 +23,8 @@ export class EmployeesComponent implements OnInit {
     });
   }
   insertData(){
-    console.log('hello');
+    this.dataService.insertData(this.employee).subscribe(res=>{
+      this.getEmployeesData();
+    })
   }
 }
