@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Employee } from 'src/app/employee';
 import { DataService } from 'src/app/service/data.service';
 
 
@@ -9,6 +10,7 @@ import { DataService } from 'src/app/service/data.service';
 })
 export class EmployeesComponent implements OnInit {
   employees:any;
+  employee = new Employee();
   constructor(private dataService:DataService) { }
 
   ngOnInit(): void {
