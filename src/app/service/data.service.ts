@@ -25,4 +25,8 @@ export class DataService {
     return this.httpClient.get('http://127.0.0.1:8000/api/employee/'+id);
 
   }
+
+  updateData(id:Number, data:Employee){
+    return this.httpClient.put('http://127.0.0.1:8000/api/updateEmployee/'+id, data);
+  }
 }
